@@ -2,7 +2,131 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "prayer-submit": {
+      "root": "apps/prayer-submit/",
+      "sourceRoot": "apps/prayer-submit/src",
+      "projectType": "application",
+      "prefix": "prayers",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/prayer-submit",
+            "index": "apps/prayer-submit/src/index.html",
+            "main": "apps/prayer-submit/src/main.ts",
+            "polyfills": "apps/prayer-submit/src/polyfills.ts",
+            "tsConfig": "apps/prayer-submit/tsconfig.app.json",
+            "assets": [
+              "apps/prayer-submit/src/favicon.ico",
+              "apps/prayer-submit/src/assets"
+            ],
+            "styles": [
+              "apps/prayer-submit/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/prayer-submit/src/environments/environment.ts",
+                  "with": "apps/prayer-submit/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "prayer-submit:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "prayer-submit:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "prayer-submit:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/prayer-submit/tsconfig.app.json",
+              "apps/prayer-submit/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/prayer-submit/jest.config.js",
+            "tsConfig": "apps/prayer-submit/tsconfig.spec.json",
+            "setupFile": "apps/prayer-submit/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "prayer-submit-e2e": {
+      "root": "apps/prayer-submit-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/prayer-submit-e2e/cypress.json",
+            "tsConfig": "apps/prayer-submit-e2e/tsconfig.e2e.json",
+            "devServerTarget": "prayer-submit:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "prayer-submit:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/prayer-submit-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
@@ -18,5 +142,6 @@
     "@nrwl/schematics:library": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "prayer-submit"
 }

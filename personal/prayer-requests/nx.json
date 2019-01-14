@@ -7,5 +7,12 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "prayer-submit": {
+      "tags": []
+    },
+    "prayer-submit-e2e": {
+      "tags": []
+    }
+  }
 }
