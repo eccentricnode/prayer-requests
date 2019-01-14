@@ -7,9 +7,9 @@
             <mat-list-item class="mat-list-option" *ngFor="let prayer of prayers"
                 (click)="selectPrayer(prayer)">
                <span matLine><strong>Name: </strong> {{prayer.name}}</span>
-               <span matLine><strong>: </strong> {{prayer.prayerType}}</span>
+               <span matLine><strong>Prayer Type: </strong> {{prayer.prayerType}}</span>
                <span matLine>
-                <strong>Name: </strong> {{prayer.message ? prayer.message : 'Unspoken Request'}}</span>
+                <strong>Message: </strong> {{prayer.message ? prayer.message : 'Unspoken Request'}}</span>
             </mat-list-item>
         </mat-list>
     </mat-card-content>

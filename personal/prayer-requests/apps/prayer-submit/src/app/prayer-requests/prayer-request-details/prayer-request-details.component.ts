@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Prayer } from '../../shared/prayer';
 
 @Component({
@@ -7,5 +7,9 @@ import { Prayer } from '../../shared/prayer';
   styleUrls: ['./prayer-request-details.component.scss']
 })
 export class PrayerRequestDetailsComponent{
-  @Input() selectedPrayer: Prayer;
+  currentPrayer: Prayer;
+  
+  @Input() set selectedPrayer(value: Prayer) {
+    this.currentPrayer = Object.assign({}, value);
+  }
 }

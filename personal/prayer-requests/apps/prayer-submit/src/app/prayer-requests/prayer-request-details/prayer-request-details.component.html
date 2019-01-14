@@ -1,15 +1,34 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Create Prayer Requests</mat-card-title>
-    <mat-card-subtitle>Write Something</mat-card-subtitle>
+    <mat-card-title>Create Prayer Request</mat-card-title>
+    <mat-card-subtitle>Write something</mat-card-subtitle>
   </mat-card-header>
-
-<mat-card-content>
-  <pre>{{selectedPrayer | json}}</pre>
-</mat-card-content>
-
-<mat-card-actions class="action-buttons">
-  <button color="primary" mat-raised-button>Submit</button>
-  <button color="accent" mat-raised-button>Cancel</button>
-</mat-card-actions>
+  <form>
+    <mat-card-content class="card-content">
+      <!-- Name input-->
+      <mat-form-field>
+        <input [(ngModel)]="currentPrayer.name" matInput name="name"
+        type="text" placeholder="Full Name">
+      </mat-form-field>
+      <!-- Prayer Type input-->
+      <mat-form-field>
+        <mat-select placeholder="Prayer Type" name="prayerType" 
+          [(ngModel)]="currentPrayer.prayerType">
+          <mat-option value="testimony">Testimony</mat-option>
+          <mat-option value="prayer">Prayer Request</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- Message Input -->
+      <mat-form-field>
+        <textarea matInput placeholder="Type a message" name="message"
+        [(ngModel)]="currentPrayer.message"></textarea>
+      </mat-form-field>
+      <!-- Unspoken Checkbox -->
+      <mat-checkbox>Unspoken?</mat-checkbox>
+    </mat-card-content>
+    <mat-card-actions class="action-buttons">
+      <button color="primary" mat-raised-button>Submit</button>
+      <button color="accent" mat-raised-button>Cancel</button>
+    </mat-card-actions>
+  </form>
 </mat-card>

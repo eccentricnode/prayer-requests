@@ -8,6 +8,7 @@ import { PrayerRequestsComponent } from './prayer-requests/prayer-requests.compo
 import { PrayerRequestListComponent } from './prayer-requests/prayer-request-list/prayer-request-list.component';
 import { PrayerRequestDetailsComponent } from './prayer-requests/prayer-request-details/prayer-request-details.component';
 import { MaterialModule } from '@prayers/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MaterialModule } from '@prayers/material';
   imports: [
     BrowserModule, 
     NxModule.forRoot(),
+    FormsModule,
     MaterialModule
   ],
   providers: [],
