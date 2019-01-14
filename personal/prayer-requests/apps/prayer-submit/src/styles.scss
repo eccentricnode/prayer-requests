@@ -1,2 +1,14 @@
 
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+  
