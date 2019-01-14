@@ -1,0 +1,16 @@
+{
+    "prayers": [
+        {
+            "id": 1,
+            "name": "Alex Smith",
+            "prayerType": "testimony",
+            "message": "A testimony message"
+        },
+        {
+            "id": 2,
+            "name": "Alexa Smith",
+            "prayerType": "prayer",
+            "message": "A prayer message"
+        }
+    ]
+}
