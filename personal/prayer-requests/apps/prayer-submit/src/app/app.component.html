@@ -1,1 +1,19 @@
+<mat-toolbar color="primary" class="mat-elevation-z5">
+    <button (click)="sidenav.toggle()" mat-raised-button color="accent">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{title}}</span>
+    <img src="../favicon.ico" alt="">
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" class="mat-elevation-z5">
+        <nav>
+            <a mat-button
+                class="nav-link">
+            </a>
+        </nav>
+    </mat-sidenav>
+</mat-sidenav-container>
+
 <prayers-prayer-requests></prayers-prayer-requests>

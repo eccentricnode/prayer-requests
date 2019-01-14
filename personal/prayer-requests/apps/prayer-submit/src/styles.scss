@@ -2,7 +2,12 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html, body {
+    height: 100%;
     margin: 0;
+}
+
+mat-sidenav-container {
+    height: 100vh;
 }
 
 .wrapper {
