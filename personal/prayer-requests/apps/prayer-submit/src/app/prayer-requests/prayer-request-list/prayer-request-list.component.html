@@ -1,3 +1,15 @@
 <mat-card>
-    
+    <mat-card-header>
+       <h3>Prayers</h3>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item class="mat-list-option" *ngFor="let prayer of prayers">
+               <span matLine><strong>Name: </strong> {{prayer.name}}</span>
+               <span matLine><strong>: </strong> {{prayer.prayerType}}</span>
+               <span matLine>
+                <strong>Name: </strong> {{prayer.message ? prayer.message : 'Unspoken Request'}}</span>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
 </mat-card>
