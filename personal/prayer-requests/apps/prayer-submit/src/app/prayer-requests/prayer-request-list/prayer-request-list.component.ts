@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Prayer } from '../../shared/prayer';
 
 @Component({
@@ -8,4 +8,11 @@ import { Prayer } from '../../shared/prayer';
 })
 export class PrayerRequestListComponent{
   @Input() prayers: Prayer[];
+  @Output() selected = new EventEmitter();
+  
+  constructor() {}
+
+  selectPrayer(prayer: Prayer) {
+    this.selected.emit(prayer);
+  }
 }

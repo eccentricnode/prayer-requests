@@ -1,3 +1,15 @@
-<p>
-  prayer-request-details works!
-</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Create Prayer Requests</mat-card-title>
+    <mat-card-subtitle>Write Something</mat-card-subtitle>
+  </mat-card-header>
+
+<mat-card-content>
+  <pre>{{selectedPrayer | json}}</pre>
+</mat-card-content>
+
+<mat-card-actions class="action-buttons">
+  <button color="primary" mat-raised-button>Submit</button>
+  <button color="accent" mat-raised-button>Cancel</button>
+</mat-card-actions>
+</mat-card>

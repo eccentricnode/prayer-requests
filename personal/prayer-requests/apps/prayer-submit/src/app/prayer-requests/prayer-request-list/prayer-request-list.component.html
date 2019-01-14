@@ -4,7 +4,8 @@
     </mat-card-header>
     <mat-card-content>
         <mat-list>
-            <mat-list-item class="mat-list-option" *ngFor="let prayer of prayers">
+            <mat-list-item class="mat-list-option" *ngFor="let prayer of prayers"
+                (click)="selectPrayer(prayer)">
                <span matLine><strong>Name: </strong> {{prayer.name}}</span>
                <span matLine><strong>: </strong> {{prayer.prayerType}}</span>
                <span matLine>

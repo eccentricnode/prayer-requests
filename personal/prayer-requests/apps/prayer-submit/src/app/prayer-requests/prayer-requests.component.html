@@ -1,10 +1,11 @@
 <div class="wrapper">
   <div class="list-grid">
-    <prayers-prayer-request-list [prayers]="prayers">
+    <prayers-prayer-request-list [prayers]="prayers"
+                                  (selected)="selectPrayer($event)">
     </prayers-prayer-request-list>
   </div>
   
   <div class="details-grid">
-    <prayers-prayer-request-details></prayers-prayer-request-details>
+    <prayers-prayer-request-details [selectedPrayer]="selectedPrayer"></prayers-prayer-request-details>
   </div>
 </div>

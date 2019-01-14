@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Prayer } from '../shared/prayer';
 
 @Component({
   selector: 'prayers-prayer-requests',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prayer-requests.component.scss']
 })
 export class PrayerRequestsComponent implements OnInit {
+  selectedPrayer: Prayer;
   prayers: Prayer[] = [
     {
         "id": 1,
@@ -26,6 +28,10 @@ export class PrayerRequestsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectPrayer(prayer: Prayer) {
+    this.selectedPrayer = prayer;
   }
 
 }
