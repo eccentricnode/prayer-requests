@@ -27,8 +27,14 @@
       <mat-checkbox>Unspoken?</mat-checkbox>
     </mat-card-content>
     <mat-card-actions class="action-buttons">
-      <button color="primary" mat-raised-button>Submit</button>
-      <button color="accent" mat-raised-button>Cancel</button>
+      <button color="primary" mat-raised-button
+        (click)="saved.emit(currentPrayer)">
+          Submit
+      </button>
+      <button color="accent" mat-raised-button
+        (click)="cancelled.emit(currentPrayer)">
+          Cancel
+      </button>
     </mat-card-actions>
   </form>
 </mat-card>
