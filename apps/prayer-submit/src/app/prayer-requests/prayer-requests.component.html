@@ -1,11 +1,17 @@
 <div class="wrapper">
   <div class="list-grid">
-    <prayers-prayer-request-list [prayers]="prayers"
-      (selected)="selectPrayer($event)">
+    <prayers-prayer-request-list 
+      [prayers]="prayers$ | async"
+      (selected)="selectPrayer($event)"
+      (deleted)="deletePrayer($event)">
     </prayers-prayer-request-list>
   </div>
   
   <div class="details-grid">
-    <prayers-prayer-request-details [selectedPrayer]="selectedPrayer"></prayers-prayer-request-details>
+    <prayers-prayer-request-details 
+      [selectedPrayer]="selectedPrayer"
+      (saved)="savePrayer($event)"
+      (cancelled)="cancel($event)">
+    </prayers-prayer-request-details>
   </div>
 </div>

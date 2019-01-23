@@ -9,8 +9,7 @@ import { Prayer } from '../../shared/prayer';
 export class PrayerRequestListComponent{
   @Input() prayers: Prayer[];
   @Output() selected = new EventEmitter();
-  
-  constructor() {}
+  @Output() deleted = new EventEmitter();
 
   selectPrayer(prayer: Prayer) {
     this.selected.emit(prayer);

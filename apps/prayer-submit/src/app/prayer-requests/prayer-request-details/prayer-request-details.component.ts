@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Prayer } from '../../shared/prayer';
 
 @Component({
@@ -8,6 +8,8 @@ import { Prayer } from '../../shared/prayer';
 })
 export class PrayerRequestDetailsComponent{
   currentPrayer: Prayer;
+  @Output() saved = new EventEmitter();
+  @Output() cancelled = new EventEmitter();
   
   @Input() set selectedPrayer(value: Prayer) {
     this.currentPrayer = Object.assign({}, value);
