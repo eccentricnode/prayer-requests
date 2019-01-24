@@ -7,7 +7,7 @@ const routes: Routes = [
     { path: '', redirectTo: '/prayers', pathMatch: 'full' },
     { path: 'prayers', component: PrayerRequestsComponent },
     // If a random route is describes you will be redirected to '' which will redirect to PrayersComponent
-    { path: '**', redirectTo: '', pathMatch: 'full' }
+    { path: '**', redirectTo: '/prayers', pathMatch: 'full' }
   ];
 
 @NgModule({
