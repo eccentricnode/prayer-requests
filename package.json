@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"ng serve\" \"node ./server/server.js\"",
-    "deploy:prayer-app": "ng build && cp ./build/apps/prayer-submit/index.html ./build/apps/prayer-submit/200.html && surge ./build/apps/prayer-submit/https://whatevery.surge.sh/",
+    "deploy:prayer-app": "ng build && cp ./build/apps/prayer-submit/index.html ./build/apps/prayer-submit/200.html && surge ./build/apps/prayer-submit/ https://whatevery.surge.sh/",
     "build": "ng build",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
