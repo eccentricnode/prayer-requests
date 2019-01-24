@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class AppComponent {
   title = 'prayer-submit';
   links = [
-    { path: '/prayers', icon: 'book', title: 'Prayers' }
+    { path: '/home', icon: 'home', title: 'Home' },
+    { path: '/prayers', icon: 'book', title: 'Prayers/Testimonies' }
   ];
 }
