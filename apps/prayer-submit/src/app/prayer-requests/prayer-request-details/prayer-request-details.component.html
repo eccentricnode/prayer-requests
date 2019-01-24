@@ -28,11 +28,11 @@
     </mat-card-content>
     <mat-card-actions class="action-buttons">
       <button color="primary" mat-raised-button
-        (click)="saved.emit(currentPrayer)">
+        (click)="savePrayerSubmit(currentPrayer)">
           Submit
       </button>
       <button color="accent" mat-raised-button
-        (click)="cancelled.emit(currentPrayer)">
+        (click)="cancelPrayerSubmit()">
           Cancel
       </button>
     </mat-card-actions>

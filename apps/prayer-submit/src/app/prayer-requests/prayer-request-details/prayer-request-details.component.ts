@@ -10,6 +10,14 @@ export class PrayerRequestDetailsComponent{
   currentPrayer: Prayer;
   @Output() saved = new EventEmitter();
   @Output() cancelled = new EventEmitter();
+
+  savePrayerSubmit(prayer: Prayer) {
+    this.saved.emit(prayer);
+  }
+
+  cancelPrayerSubmit() {
+    this.cancelled.emit();
+  }
   
   @Input() set selectedPrayer(value: Prayer) {
     this.currentPrayer = Object.assign({}, value);

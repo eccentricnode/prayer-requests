@@ -8,6 +8,7 @@ import { Prayer } from '../../shared/prayer';
 })
 export class PrayerRequestListComponent{
   @Input() prayers: Prayer[];
+  @Input() readonly = false;
   @Output() selected = new EventEmitter();
   @Output() deleted = new EventEmitter();
 
