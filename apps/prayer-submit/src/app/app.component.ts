@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'prayers-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prayer-submit';
+  links = [
+    { path: '/prayers', icon: Subject, title: 'Prayers' }
+  ];
 }

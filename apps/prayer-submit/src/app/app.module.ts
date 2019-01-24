@@ -10,6 +10,7 @@ import { PrayerRequestDetailsComponent } from './prayer-requests/prayer-request-
 import { MaterialModule } from '@prayers/material';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './routing.module';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent, 
     PrayerRequestsComponent, 
     PrayerRequestListComponent, 
-    PrayerRequestDetailsComponent],
+    PrayerRequestDetailsComponent
+  ],
   imports: [
     BrowserModule, 
     NxModule.forRoot(),
     FormsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

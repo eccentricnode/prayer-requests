@@ -9,12 +9,18 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" class="mat-elevation-z5">
         <nav>
-            <a mat-button
-                class="nav-link">
-            </a>
+            <a mat-button *ngFor="let link of links" 
+            [routerLink]="link.path" 
+            routerLinkActive="active">
+                <mat-icon>
+                  {{link.icon}}
+                </mat-icon>
+                {{link.title}}
+          </a>
         </nav>
     </mat-sidenav>
-    
-    <prayers-prayer-requests></prayers-prayer-requests>
+        <div class="app-content">
+            <router-outlet></router-outlet>
+        </div>
 </mat-sidenav-container>
 
