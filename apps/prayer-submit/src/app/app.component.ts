@@ -9,6 +9,6 @@ import { Subject } from 'rxjs';
 export class AppComponent {
   title = 'prayer-submit';
   links = [
-    { path: '/prayers', icon: Subject, title: 'Prayers' }
+    { path: '/prayers', icon: 'book', title: 'Prayers' }
   ];
 }
