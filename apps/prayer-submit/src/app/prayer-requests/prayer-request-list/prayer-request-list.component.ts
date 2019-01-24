@@ -14,4 +14,8 @@ export class PrayerRequestListComponent{
   selectPrayer(prayer: Prayer) {
     this.selected.emit(prayer);
   }
+
+  displayMessage(message) {
+    return message ? message : '';
+  }
 }
