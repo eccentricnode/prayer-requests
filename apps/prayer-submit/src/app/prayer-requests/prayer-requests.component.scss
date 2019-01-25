@@ -7,4 +7,10 @@
     .details-grid{
         grid-column: 7/12;
     }
+
+    @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
 }
